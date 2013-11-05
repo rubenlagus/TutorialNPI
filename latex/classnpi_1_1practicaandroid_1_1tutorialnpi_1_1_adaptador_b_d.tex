@@ -1,0 +1,508 @@
+\hypertarget{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d}{\section{npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D Class Reference}
+\label{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d}\index{npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D@{npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D}}
+}
+
+
+This class contains all the methods needed by our application to access the database.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_ae2c480d1905c47980f292da8ccbce7fc}{Adaptador\-B\-D} (Context ctx)
+\begin{DoxyCompactList}\small\item\em Constructor Initialise the context and the Manager. \end{DoxyCompactList}\item 
+\hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d}{Adaptador\-B\-D} \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_a128413ac90cfc708b95c21d946f9600d}{open} ()  throws S\-Q\-L\-Exception 
+\begin{DoxyCompactList}\small\item\em Open the database. \end{DoxyCompactList}\item 
+void \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_a466dc4c61ae61457cf986b5d8c6f6f52}{close} ()
+\begin{DoxyCompactList}\small\item\em Close the database. \end{DoxyCompactList}\item 
+long \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_ad439502dcc05da37509b1e693be223d9}{add\-Contact} (String name, String email)
+\begin{DoxyCompactList}\small\item\em Add a new contact to our database. \end{DoxyCompactList}\item 
+boolean \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_a1fd702d46f017cca50e03a46eb0ff8dc}{remove\-Contact\-By\-Name} (String name)
+\begin{DoxyCompactList}\small\item\em Remove a contact. \end{DoxyCompactList}\item 
+Cursor \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_ab57b493581975afbbf05b835c4fa4f21}{get\-All\-Names} ()
+\begin{DoxyCompactList}\small\item\em Find all name of the contacts. \end{DoxyCompactList}\item 
+Cursor \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_adefdc5d28d774882336abfda419979f2}{obtener\-Todos\-Los\-Contactos} ()
+\begin{DoxyCompactList}\small\item\em Get all the contacts with their emails. \end{DoxyCompactList}\item 
+Cursor \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_ae5ebb47b1a0166bbf866eda0367deae7}{obtener\-Contacto} (long id\-Fila)  throws S\-Q\-L\-Exception 
+\begin{DoxyCompactList}\small\item\em Get a contact by its I\-D. \end{DoxyCompactList}\item 
+Cursor \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_aef7ad90990381354464ef5f7b2464930}{get\-Email\-By\-Name} (String name)
+\begin{DoxyCompactList}\small\item\em Get the email of a contact given its name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_aef0b2454f8965f292b6c5e1c3f3de2b1}{K\-E\-Y\-\_\-\-I\-D\-F\-I\-L\-A} = \char`\"{}\-\_\-id\char`\"{}
+\item 
+static final String \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_aac27fea036b6e589b6a4a8c2e3d5b596}{K\-E\-Y\-\_\-\-N\-O\-M\-B\-R\-E} = \char`\"{}nombre\char`\"{}
+\item 
+static final String \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_a73ed6dbe79a9f13e4d84a081e10a3d3f}{K\-E\-Y\-\_\-\-E\-M\-A\-I\-L} = \char`\"{}email\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+final Context \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_a637ed3bd130ac8715ce83832cc24635c}{context}
+\item 
+\hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_database_helper}{Database\-Helper} \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_ac3e24d1a7aeeb4bc0fe78f054c42752b}{D\-B\-Helper}
+\item 
+S\-Q\-Lite\-Database \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_a7bda122c7e3ef7889ebe3f14ee6a6992}{db}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_abbf36d9723f1844372402ae083635e3f}{T\-A\-B\-L\-A\-\_\-\-B\-A\-S\-E\-D\-A\-T\-O\-S} = \char`\"{}contactos\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class contains all the methods needed by our application to access the database. 
+
+\begin{DoxyAuthor}{Author}
+Ruben Bermudez 
+
+Santiago Tapia 
+
+Isaac Morely
+\end{DoxyAuthor}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_database_helper}{Database\-Helper} 
+
+android.\-database.\-sqlite.\-S\-Q\-Lite\-Database 
+\end{DoxySeeAlso}
+
+
+Definition at line 43 of file Adaptador\-B\-D.\-java.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_ae2c480d1905c47980f292da8ccbce7fc}{\index{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D@{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D}!Adaptador\-B\-D@{Adaptador\-B\-D}}
+\index{Adaptador\-B\-D@{Adaptador\-B\-D}!npi::practicaandroid::tutorialnpi::AdaptadorBD@{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D}}
+\subsubsection[{Adaptador\-B\-D}]{\setlength{\rightskip}{0pt plus 5cm}npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-Adaptador\-B\-D (
+\begin{DoxyParamCaption}
+\item[{Context}]{ctx}
+\end{DoxyParamCaption}
+)}}\label{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_ae2c480d1905c47980f292da8ccbce7fc}
+
+
+Constructor Initialise the context and the Manager. 
+
+
+
+Definition at line 56 of file Adaptador\-B\-D.\-java.
+
+
+
+References npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-context, and npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-D\-B\-Helper.
+
+
+\begin{DoxyCode}
+                                   \{
+        this.\hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_a637ed3bd130ac8715ce83832cc24635c}{context} = ctx;
+        \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_ac3e24d1a7aeeb4bc0fe78f054c42752b}{DBHelper} = \textcolor{keyword}{new} DatabaseHelper(\hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_a637ed3bd130ac8715ce83832cc24635c}{context});
+    \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_ad439502dcc05da37509b1e693be223d9}{\index{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D@{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D}!add\-Contact@{add\-Contact}}
+\index{add\-Contact@{add\-Contact}!npi::practicaandroid::tutorialnpi::AdaptadorBD@{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D}}
+\subsubsection[{add\-Contact}]{\setlength{\rightskip}{0pt plus 5cm}long npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-add\-Contact (
+\begin{DoxyParamCaption}
+\item[{String}]{name, }
+\item[{String}]{email}
+\end{DoxyParamCaption}
+)}}\label{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_ad439502dcc05da37509b1e693be223d9}
+
+
+Add a new contact to our database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the contact \\
+\hline
+{\em email} & Email of the contact \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+I\-D of the new registry created when adding 
+\end{DoxyReturn}
+
+
+Definition at line 84 of file Adaptador\-B\-D.\-java.
+
+
+
+References npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-db, npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-K\-E\-Y\-\_\-\-E\-M\-A\-I\-L, npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-K\-E\-Y\-\_\-\-N\-O\-M\-B\-R\-E, and npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-T\-A\-B\-L\-A\-\_\-\-B\-A\-S\-E\-D\-A\-T\-O\-S.
+
+
+
+Referenced by npi.\-practicaandroid.\-tutorialnpi.\-Add\-Contact.\-on\-Create().
+
+
+\begin{DoxyCode}
+                                                      \{
+        ContentValues initialValues = \textcolor{keyword}{new} ContentValues();
+        initialValues.put(\hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_aac27fea036b6e589b6a4a8c2e3d5b596}{KEY\_NOMBRE}, name);
+        initialValues.put(\hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_a73ed6dbe79a9f13e4d84a081e10a3d3f}{KEY\_EMAIL}, email);
+        \textcolor{keywordflow}{return} \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_a7bda122c7e3ef7889ebe3f14ee6a6992}{db}.insert(\hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_abbf36d9723f1844372402ae083635e3f}{TABLA\_BASEDATOS}, null, initialValues)
+      ;
+    \}
+\end{DoxyCode}
+\hypertarget{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_a466dc4c61ae61457cf986b5d8c6f6f52}{\index{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D@{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D}!close@{close}}
+\index{close@{close}!npi::practicaandroid::tutorialnpi::AdaptadorBD@{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D}}
+\subsubsection[{close}]{\setlength{\rightskip}{0pt plus 5cm}void npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_a466dc4c61ae61457cf986b5d8c6f6f52}
+
+
+Close the database. 
+
+
+
+Definition at line 74 of file Adaptador\-B\-D.\-java.
+
+
+
+References npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-D\-B\-Helper.
+
+
+
+Referenced by npi.\-practicaandroid.\-tutorialnpi.\-Add\-Contact.\-check\-Constraints(), npi.\-practicaandroid.\-tutorialnpi.\-Add\-Contact.\-on\-Create(), npi.\-practicaandroid.\-tutorialnpi.\-Read\-Contact.\-on\-Create(), npi.\-practicaandroid.\-tutorialnpi.\-Remove\-Contact.\-on\-Create(), npi.\-practicaandroid.\-tutorialnpi.\-Read\-Contact.\-on\-Pause(), npi.\-practicaandroid.\-tutorialnpi.\-Remove\-Contact.\-on\-Pause(), and npi.\-practicaandroid.\-tutorialnpi.\-Add\-Contact.\-on\-Pause().
+
+
+\begin{DoxyCode}
+                       \{
+        \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_ac3e24d1a7aeeb4bc0fe78f054c42752b}{DBHelper}.close();
+    \}
+\end{DoxyCode}
+\hypertarget{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_ab57b493581975afbbf05b835c4fa4f21}{\index{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D@{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D}!get\-All\-Names@{get\-All\-Names}}
+\index{get\-All\-Names@{get\-All\-Names}!npi::practicaandroid::tutorialnpi::AdaptadorBD@{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D}}
+\subsubsection[{get\-All\-Names}]{\setlength{\rightskip}{0pt plus 5cm}Cursor npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-get\-All\-Names (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_ab57b493581975afbbf05b835c4fa4f21}
+
+
+Find all name of the contacts. 
+
+\begin{DoxyReturn}{Returns}
+Cursor for the list of names retrieved from the database 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+android.\-database.\-Cursor 
+\end{DoxySeeAlso}
+
+
+Definition at line 105 of file Adaptador\-B\-D.\-java.
+
+
+
+References npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-db, npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-K\-E\-Y\-\_\-\-N\-O\-M\-B\-R\-E, and npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-T\-A\-B\-L\-A\-\_\-\-B\-A\-S\-E\-D\-A\-T\-O\-S.
+
+
+
+Referenced by npi.\-practicaandroid.\-tutorialnpi.\-Add\-Contact.\-check\-Constraints(), npi.\-practicaandroid.\-tutorialnpi.\-Read\-Contact.\-on\-Create(), and npi.\-practicaandroid.\-tutorialnpi.\-Remove\-Contact.\-on\-Create().
+
+
+\begin{DoxyCode}
+                               \{
+        String query = \textcolor{stringliteral}{"SELECT "} + \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_aac27fea036b6e589b6a4a8c2e3d5b596}{KEY\_NOMBRE} + \textcolor{stringliteral}{" FROM "} + 
+      \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_abbf36d9723f1844372402ae083635e3f}{TABLA\_BASEDATOS};
+        Log.e(\textcolor{stringliteral}{"MyDataBase"}, query);
+        Cursor mCursor = \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_a7bda122c7e3ef7889ebe3f14ee6a6992}{db}.rawQuery(query, null);
+        \textcolor{keywordflow}{if} (mCursor != null)
+            mCursor.moveToFirst();
+        \textcolor{keywordflow}{return} mCursor;
+    \}
+\end{DoxyCode}
+\hypertarget{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_aef7ad90990381354464ef5f7b2464930}{\index{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D@{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D}!get\-Email\-By\-Name@{get\-Email\-By\-Name}}
+\index{get\-Email\-By\-Name@{get\-Email\-By\-Name}!npi::practicaandroid::tutorialnpi::AdaptadorBD@{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D}}
+\subsubsection[{get\-Email\-By\-Name}]{\setlength{\rightskip}{0pt plus 5cm}Cursor npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-get\-Email\-By\-Name (
+\begin{DoxyParamCaption}
+\item[{String}]{name}
+\end{DoxyParamCaption}
+)}}\label{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_aef7ad90990381354464ef5f7b2464930}
+
+
+Get the email of a contact given its name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the contact \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Cursor for this email 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+
+
+android.\-database.\-Cursor 
+\end{DoxySeeAlso}
+
+
+Definition at line 144 of file Adaptador\-B\-D.\-java.
+
+
+
+References npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-db, npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-K\-E\-Y\-\_\-\-E\-M\-A\-I\-L, npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-K\-E\-Y\-\_\-\-N\-O\-M\-B\-R\-E, and npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-T\-A\-B\-L\-A\-\_\-\-B\-A\-S\-E\-D\-A\-T\-O\-S.
+
+
+
+Referenced by npi.\-practicaandroid.\-tutorialnpi.\-Read\-Contact.\-on\-Create().
+
+
+\begin{DoxyCode}
+                                              \{
+        Cursor mCursor = \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_a7bda122c7e3ef7889ebe3f14ee6a6992}{db}.query(\hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_abbf36d9723f1844372402ae083635e3f}{TABLA\_BASEDATOS}, \textcolor{keyword}{new} String[
+      ] \{ \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_a73ed6dbe79a9f13e4d84a081e10a3d3f}{KEY\_EMAIL} \}, \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_aac27fea036b6e589b6a4a8c2e3d5b596}{KEY\_NOMBRE} + \textcolor{stringliteral}{"=?"}, \textcolor{keyword}{new} String[] \{ String.
+      valueOf(name) \}, null, null, null, null);
+        \textcolor{keywordflow}{if} (mCursor != null)
+            mCursor.moveToFirst();
+        \textcolor{keywordflow}{return} mCursor;
+        
+    \}   
+\end{DoxyCode}
+\hypertarget{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_ae5ebb47b1a0166bbf866eda0367deae7}{\index{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D@{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D}!obtener\-Contacto@{obtener\-Contacto}}
+\index{obtener\-Contacto@{obtener\-Contacto}!npi::practicaandroid::tutorialnpi::AdaptadorBD@{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D}}
+\subsubsection[{obtener\-Contacto}]{\setlength{\rightskip}{0pt plus 5cm}Cursor npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-obtener\-Contacto (
+\begin{DoxyParamCaption}
+\item[{long}]{id\-Fila}
+\end{DoxyParamCaption}
+)  throws S\-Q\-L\-Exception }}\label{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_ae5ebb47b1a0166bbf866eda0367deae7}
+
+
+Get a contact by its I\-D. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\-Fila} & I\-D of the contact \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Cursor for this contact 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em S\-Q\-L\-Exception} & If the contact could not be found \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See Also}
+android.\-database.\-Cursor 
+\end{DoxySeeAlso}
+
+
+Definition at line 130 of file Adaptador\-B\-D.\-java.
+
+
+
+References npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-db, npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-K\-E\-Y\-\_\-\-E\-M\-A\-I\-L, npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-K\-E\-Y\-\_\-\-I\-D\-F\-I\-L\-A, npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-K\-E\-Y\-\_\-\-N\-O\-M\-B\-R\-E, and npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-T\-A\-B\-L\-A\-\_\-\-B\-A\-S\-E\-D\-A\-T\-O\-S.
+
+
+\begin{DoxyCode}
+                                                                   \{
+        Cursor mCursor = \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_a7bda122c7e3ef7889ebe3f14ee6a6992}{db}.query(\textcolor{keyword}{true}, \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_abbf36d9723f1844372402ae083635e3f}{TABLA\_BASEDATOS}, \textcolor{keyword}{new} 
+      String[] \{\hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_aef0b2454f8965f292b6c5e1c3f3de2b1}{KEY\_IDFILA}, \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_aac27fea036b6e589b6a4a8c2e3d5b596}{KEY\_NOMBRE}, \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_a73ed6dbe79a9f13e4d84a081e10a3d3f}{KEY\_EMAIL}\}, 
+      \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_aef0b2454f8965f292b6c5e1c3f3de2b1}{KEY\_IDFILA} + \textcolor{stringliteral}{"="} + idFila, null, null, null, null, null);
+        \textcolor{keywordflow}{if} (mCursor != null)
+            mCursor.moveToFirst();
+        
+        \textcolor{keywordflow}{return} mCursor;
+    \}
+\end{DoxyCode}
+\hypertarget{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_adefdc5d28d774882336abfda419979f2}{\index{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D@{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D}!obtener\-Todos\-Los\-Contactos@{obtener\-Todos\-Los\-Contactos}}
+\index{obtener\-Todos\-Los\-Contactos@{obtener\-Todos\-Los\-Contactos}!npi::practicaandroid::tutorialnpi::AdaptadorBD@{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D}}
+\subsubsection[{obtener\-Todos\-Los\-Contactos}]{\setlength{\rightskip}{0pt plus 5cm}Cursor npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-obtener\-Todos\-Los\-Contactos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_adefdc5d28d774882336abfda419979f2}
+
+
+Get all the contacts with their emails. 
+
+\begin{DoxyReturn}{Returns}
+Cursor for the list of contacts. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+android.\-database.\-Cursor 
+\end{DoxySeeAlso}
+
+
+Definition at line 119 of file Adaptador\-B\-D.\-java.
+
+
+
+References npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-db, npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-K\-E\-Y\-\_\-\-E\-M\-A\-I\-L, npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-K\-E\-Y\-\_\-\-I\-D\-F\-I\-L\-A, npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-K\-E\-Y\-\_\-\-N\-O\-M\-B\-R\-E, and npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-T\-A\-B\-L\-A\-\_\-\-B\-A\-S\-E\-D\-A\-T\-O\-S.
+
+
+\begin{DoxyCode}
+                                            \{
+        \textcolor{keywordflow}{return} \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_a7bda122c7e3ef7889ebe3f14ee6a6992}{db}.query(\hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_abbf36d9723f1844372402ae083635e3f}{TABLA\_BASEDATOS}, \textcolor{keyword}{new} String[] \{
+      \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_aef0b2454f8965f292b6c5e1c3f3de2b1}{KEY\_IDFILA}, \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_aac27fea036b6e589b6a4a8c2e3d5b596}{KEY\_NOMBRE}, \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_a73ed6dbe79a9f13e4d84a081e10a3d3f}{KEY\_EMAIL}\}, null, null, 
+      null, null, null);
+    \}
+\end{DoxyCode}
+\hypertarget{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_a128413ac90cfc708b95c21d946f9600d}{\index{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D@{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D}!open@{open}}
+\index{open@{open}!npi::practicaandroid::tutorialnpi::AdaptadorBD@{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D}}
+\subsubsection[{open}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Adaptador\-B\-D} npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-open (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)  throws S\-Q\-L\-Exception }}\label{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_a128413ac90cfc708b95c21d946f9600d}
+
+
+Open the database. 
+
+\begin{DoxyReturn}{Returns}
+Itself to allow other calls to method after open the db 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em S\-Q\-L\-Exception} & If any problem oppening the db \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 66 of file Adaptador\-B\-D.\-java.
+
+
+
+References npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-db, and npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-D\-B\-Helper.
+
+
+
+Referenced by npi.\-practicaandroid.\-tutorialnpi.\-Add\-Contact.\-check\-Constraints(), npi.\-practicaandroid.\-tutorialnpi.\-Add\-Contact.\-on\-Create(), npi.\-practicaandroid.\-tutorialnpi.\-Read\-Contact.\-on\-Create(), and npi.\-practicaandroid.\-tutorialnpi.\-Remove\-Contact.\-on\-Create().
+
+
+\begin{DoxyCode}
+                                                  \{
+        \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_a7bda122c7e3ef7889ebe3f14ee6a6992}{db} = \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_ac3e24d1a7aeeb4bc0fe78f054c42752b}{DBHelper}.getWritableDatabase();
+        \textcolor{keywordflow}{return} \textcolor{keyword}{this};
+    \}
+\end{DoxyCode}
+\hypertarget{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_a1fd702d46f017cca50e03a46eb0ff8dc}{\index{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D@{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D}!remove\-Contact\-By\-Name@{remove\-Contact\-By\-Name}}
+\index{remove\-Contact\-By\-Name@{remove\-Contact\-By\-Name}!npi::practicaandroid::tutorialnpi::AdaptadorBD@{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D}}
+\subsubsection[{remove\-Contact\-By\-Name}]{\setlength{\rightskip}{0pt plus 5cm}boolean npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-remove\-Contact\-By\-Name (
+\begin{DoxyParamCaption}
+\item[{String}]{name}
+\end{DoxyParamCaption}
+)}}\label{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_a1fd702d46f017cca50e03a46eb0ff8dc}
+
+
+Remove a contact. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the contact to remove \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the contact have been removed 
+\end{DoxyReturn}
+
+
+Definition at line 96 of file Adaptador\-B\-D.\-java.
+
+
+
+References npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-db, npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-K\-E\-Y\-\_\-\-N\-O\-M\-B\-R\-E, and npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-T\-A\-B\-L\-A\-\_\-\-B\-A\-S\-E\-D\-A\-T\-O\-S.
+
+
+
+Referenced by npi.\-practicaandroid.\-tutorialnpi.\-Remove\-Contact.\-on\-Create().
+
+
+\begin{DoxyCode}
+                                                   \{
+        \textcolor{keywordflow}{return} \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_a7bda122c7e3ef7889ebe3f14ee6a6992}{db}.delete(\hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_abbf36d9723f1844372402ae083635e3f}{TABLA\_BASEDATOS}, \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_aac27fea036b6e589b6a4a8c2e3d5b596}{KEY\_NOMBRE}
+       + \textcolor{stringliteral}{" = ?"}, \textcolor{keyword}{new} String[] \{ String.valueOf(name)\}) > 0;        
+    \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_a637ed3bd130ac8715ce83832cc24635c}{\index{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D@{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D}!context@{context}}
+\index{context@{context}!npi::practicaandroid::tutorialnpi::AdaptadorBD@{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D}}
+\subsubsection[{context}]{\setlength{\rightskip}{0pt plus 5cm}final Context npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-context\hspace{0.3cm}{\ttfamily [private]}}}\label{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_a637ed3bd130ac8715ce83832cc24635c}
+
+
+Definition at line 48 of file Adaptador\-B\-D.\-java.
+
+
+
+Referenced by npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-Adaptador\-B\-D().
+
+\hypertarget{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_a7bda122c7e3ef7889ebe3f14ee6a6992}{\index{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D@{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D}!db@{db}}
+\index{db@{db}!npi::practicaandroid::tutorialnpi::AdaptadorBD@{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D}}
+\subsubsection[{db}]{\setlength{\rightskip}{0pt plus 5cm}S\-Q\-Lite\-Database npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-db\hspace{0.3cm}{\ttfamily [private]}}}\label{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_a7bda122c7e3ef7889ebe3f14ee6a6992}
+
+
+Definition at line 50 of file Adaptador\-B\-D.\-java.
+
+
+
+Referenced by npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-add\-Contact(), npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-get\-All\-Names(), npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-get\-Email\-By\-Name(), npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-obtener\-Contacto(), npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-obtener\-Todos\-Los\-Contactos(), npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-open(), and npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-remove\-Contact\-By\-Name().
+
+\hypertarget{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_ac3e24d1a7aeeb4bc0fe78f054c42752b}{\index{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D@{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D}!D\-B\-Helper@{D\-B\-Helper}}
+\index{D\-B\-Helper@{D\-B\-Helper}!npi::practicaandroid::tutorialnpi::AdaptadorBD@{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D}}
+\subsubsection[{D\-B\-Helper}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Database\-Helper} npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-D\-B\-Helper\hspace{0.3cm}{\ttfamily [private]}}}\label{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_ac3e24d1a7aeeb4bc0fe78f054c42752b}
+
+
+Definition at line 49 of file Adaptador\-B\-D.\-java.
+
+
+
+Referenced by npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-Adaptador\-B\-D(), npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-close(), and npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-open().
+
+\hypertarget{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_a73ed6dbe79a9f13e4d84a081e10a3d3f}{\index{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D@{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D}!K\-E\-Y\-\_\-\-E\-M\-A\-I\-L@{K\-E\-Y\-\_\-\-E\-M\-A\-I\-L}}
+\index{K\-E\-Y\-\_\-\-E\-M\-A\-I\-L@{K\-E\-Y\-\_\-\-E\-M\-A\-I\-L}!npi::practicaandroid::tutorialnpi::AdaptadorBD@{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D}}
+\subsubsection[{K\-E\-Y\-\_\-\-E\-M\-A\-I\-L}]{\setlength{\rightskip}{0pt plus 5cm}final String npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-K\-E\-Y\-\_\-\-E\-M\-A\-I\-L = \char`\"{}email\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_a73ed6dbe79a9f13e4d84a081e10a3d3f}
+
+
+Definition at line 46 of file Adaptador\-B\-D.\-java.
+
+
+
+Referenced by npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-add\-Contact(), npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-get\-Email\-By\-Name(), npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-obtener\-Contacto(), and npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-obtener\-Todos\-Los\-Contactos().
+
+\hypertarget{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_aef0b2454f8965f292b6c5e1c3f3de2b1}{\index{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D@{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D}!K\-E\-Y\-\_\-\-I\-D\-F\-I\-L\-A@{K\-E\-Y\-\_\-\-I\-D\-F\-I\-L\-A}}
+\index{K\-E\-Y\-\_\-\-I\-D\-F\-I\-L\-A@{K\-E\-Y\-\_\-\-I\-D\-F\-I\-L\-A}!npi::practicaandroid::tutorialnpi::AdaptadorBD@{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D}}
+\subsubsection[{K\-E\-Y\-\_\-\-I\-D\-F\-I\-L\-A}]{\setlength{\rightskip}{0pt plus 5cm}final String npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-K\-E\-Y\-\_\-\-I\-D\-F\-I\-L\-A = \char`\"{}\-\_\-id\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_aef0b2454f8965f292b6c5e1c3f3de2b1}
+
+
+Definition at line 44 of file Adaptador\-B\-D.\-java.
+
+
+
+Referenced by npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-obtener\-Contacto(), and npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-obtener\-Todos\-Los\-Contactos().
+
+\hypertarget{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_aac27fea036b6e589b6a4a8c2e3d5b596}{\index{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D@{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D}!K\-E\-Y\-\_\-\-N\-O\-M\-B\-R\-E@{K\-E\-Y\-\_\-\-N\-O\-M\-B\-R\-E}}
+\index{K\-E\-Y\-\_\-\-N\-O\-M\-B\-R\-E@{K\-E\-Y\-\_\-\-N\-O\-M\-B\-R\-E}!npi::practicaandroid::tutorialnpi::AdaptadorBD@{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D}}
+\subsubsection[{K\-E\-Y\-\_\-\-N\-O\-M\-B\-R\-E}]{\setlength{\rightskip}{0pt plus 5cm}final String npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-K\-E\-Y\-\_\-\-N\-O\-M\-B\-R\-E = \char`\"{}nombre\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_aac27fea036b6e589b6a4a8c2e3d5b596}
+
+
+Definition at line 45 of file Adaptador\-B\-D.\-java.
+
+
+
+Referenced by npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-add\-Contact(), npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-get\-All\-Names(), npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-get\-Email\-By\-Name(), npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-obtener\-Contacto(), npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-obtener\-Todos\-Los\-Contactos(), and npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-remove\-Contact\-By\-Name().
+
+\hypertarget{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_abbf36d9723f1844372402ae083635e3f}{\index{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D@{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D}!T\-A\-B\-L\-A\-\_\-\-B\-A\-S\-E\-D\-A\-T\-O\-S@{T\-A\-B\-L\-A\-\_\-\-B\-A\-S\-E\-D\-A\-T\-O\-S}}
+\index{T\-A\-B\-L\-A\-\_\-\-B\-A\-S\-E\-D\-A\-T\-O\-S@{T\-A\-B\-L\-A\-\_\-\-B\-A\-S\-E\-D\-A\-T\-O\-S}!npi::practicaandroid::tutorialnpi::AdaptadorBD@{npi\-::practicaandroid\-::tutorialnpi\-::\-Adaptador\-B\-D}}
+\subsubsection[{T\-A\-B\-L\-A\-\_\-\-B\-A\-S\-E\-D\-A\-T\-O\-S}]{\setlength{\rightskip}{0pt plus 5cm}final String npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-T\-A\-B\-L\-A\-\_\-\-B\-A\-S\-E\-D\-A\-T\-O\-S = \char`\"{}contactos\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_abbf36d9723f1844372402ae083635e3f}
+
+
+Definition at line 47 of file Adaptador\-B\-D.\-java.
+
+
+
+Referenced by npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-add\-Contact(), npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-get\-All\-Names(), npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-get\-Email\-By\-Name(), npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-obtener\-Contacto(), npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-obtener\-Todos\-Los\-Contactos(), and npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-remove\-Contact\-By\-Name().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/npi/practicaandroid/tutorialnpi/\hyperlink{_adaptador_b_d_8java}{Adaptador\-B\-D.\-java}\end{DoxyCompactItemize}
