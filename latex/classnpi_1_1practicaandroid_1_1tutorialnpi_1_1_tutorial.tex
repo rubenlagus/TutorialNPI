@@ -1,0 +1,108 @@
+\hypertarget{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_tutorial}{\section{npi.\-practicaandroid.\-tutorialnpi.\-Tutorial Class Reference}
+\label{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_tutorial}\index{npi.\-practicaandroid.\-tutorialnpi.\-Tutorial@{npi.\-practicaandroid.\-tutorialnpi.\-Tutorial}}
+}
+
+
+Main Activity This class (extended from List\-Activity) show the list of features that our application have. Choosing one of them launch an activity about it.  
+
+
+Inheritance diagram for npi.\-practicaandroid.\-tutorialnpi.\-Tutorial\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_tutorial}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{Indent}{\bf on\-Create}\par
+{\em Method called when creating the view
+
+\begin{DoxyNote}{Note}
+This method initialises launch the activity that match the option choosen on the screen
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See Also}
+android.\-app.\-List\-Activity\-::on\-List\-Item\-Click(android.\-widget.\-List\-View, android.\-view.\-View, int, long) 
+\end{DoxySeeAlso}
+}\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_tutorial_ac8e775d4ab432f864e43b23c5ccd3142}{on\-Create} (Bundle saved\-Instance\-State)
+\item 
+void \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_tutorial_a0ab47398e86319bc399f400f66243c0e}{on\-List\-Item\-Click} (List\-View list, View view, int position, long id)
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Detailed Description}
+Main Activity This class (extended from List\-Activity) show the list of features that our application have. Choosing one of them launch an activity about it. 
+
+\begin{DoxyAuthor}{Author}
+Ruben Bermudez 
+
+Santiago Tapia 
+
+Isaac Morely
+\end{DoxyAuthor}
+\begin{DoxySeeAlso}{See Also}
+android.\-app.\-List\-Activity 
+\end{DoxySeeAlso}
+
+
+Definition at line 40 of file Tutorial.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_tutorial_ac8e775d4ab432f864e43b23c5ccd3142}{\index{npi\-::practicaandroid\-::tutorialnpi\-::\-Tutorial@{npi\-::practicaandroid\-::tutorialnpi\-::\-Tutorial}!on\-Create@{on\-Create}}
+\index{on\-Create@{on\-Create}!npi::practicaandroid::tutorialnpi::Tutorial@{npi\-::practicaandroid\-::tutorialnpi\-::\-Tutorial}}
+\subsubsection[{on\-Create}]{\setlength{\rightskip}{0pt plus 5cm}void npi.\-practicaandroid.\-tutorialnpi.\-Tutorial.\-on\-Create (
+\begin{DoxyParamCaption}
+\item[{Bundle}]{saved\-Instance\-State}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_tutorial_ac8e775d4ab432f864e43b23c5ccd3142}
+
+
+Definition at line 52 of file Tutorial.\-java.
+
+
+\begin{DoxyCode}
+                                                       \{
+        super.onCreate(savedInstanceState);
+        setListAdapter(\textcolor{keyword}{new} ArrayAdapter<String>(\textcolor{keyword}{this},android.R.layout.
+      simple\_list\_item\_1,tutoriales));
+    \}
+\end{DoxyCode}
+\hypertarget{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_tutorial_a0ab47398e86319bc399f400f66243c0e}{\index{npi\-::practicaandroid\-::tutorialnpi\-::\-Tutorial@{npi\-::practicaandroid\-::tutorialnpi\-::\-Tutorial}!on\-List\-Item\-Click@{on\-List\-Item\-Click}}
+\index{on\-List\-Item\-Click@{on\-List\-Item\-Click}!npi::practicaandroid::tutorialnpi::Tutorial@{npi\-::practicaandroid\-::tutorialnpi\-::\-Tutorial}}
+\subsubsection[{on\-List\-Item\-Click}]{\setlength{\rightskip}{0pt plus 5cm}void npi.\-practicaandroid.\-tutorialnpi.\-Tutorial.\-on\-List\-Item\-Click (
+\begin{DoxyParamCaption}
+\item[{List\-View}]{list, }
+\item[{View}]{view, }
+\item[{int}]{position, }
+\item[{long}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_tutorial_a0ab47398e86319bc399f400f66243c0e}
+
+
+Definition at line 66 of file Tutorial.\-java.
+
+
+\begin{DoxyCode}
+                                                                               
+         \{
+        super.onListItemClick(list, view, position, \textcolor{keywordtype}{id});
+        String nameTutorial = tutoriales[position];
+        \textcolor{keywordflow}{try} \{
+            Class<?> clazz = Class.forName(\textcolor{stringliteral}{"npi.practicaandroid.tutorialnpi."} +
+       nameTutorial);
+            Intent intent = \textcolor{keyword}{new} Intent(\textcolor{keyword}{this}, clazz);
+            startActivity(intent);
+        \}
+        \textcolor{keywordflow}{catch} (ClassNotFoundException e) \{
+            e.printStackTrace();
+        \}
+    \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/npi/practicaandroid/tutorialnpi/\hyperlink{_tutorial_8java}{Tutorial.\-java}\end{DoxyCompactItemize}

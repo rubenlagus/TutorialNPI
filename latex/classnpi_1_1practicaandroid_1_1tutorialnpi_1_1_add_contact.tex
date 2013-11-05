@@ -1,0 +1,240 @@
+\hypertarget{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_add_contact}{\section{npi.\-practicaandroid.\-tutorialnpi.\-Add\-Contact Class Reference}
+\label{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_add_contact}\index{npi.\-practicaandroid.\-tutorialnpi.\-Add\-Contact@{npi.\-practicaandroid.\-tutorialnpi.\-Add\-Contact}}
+}
+
+
+This class (extended from Activity) allow to add a contact to a database.  
+
+
+Inheritance diagram for npi.\-practicaandroid.\-tutorialnpi.\-Add\-Contact\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_add_contact}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{Indent}{\bf on\-Pause}\par
+{\em This method is called just when the view is not visible for the user (it doesn't mean that the activity is going to be destroyed.
+
+\begin{DoxyNote}{Note}
+The database is closed to allow other activities to use it
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See Also}
+android.\-app.\-Activity\-::on\-Pause() 
+\end{DoxySeeAlso}
+}\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_add_contact_a03fcd12f05d4ccf27abf686130df9668}{on\-Pause} (Bundle saved\-Instance\-State)
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d}{Adaptador\-B\-D} \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_add_contact_acec65dc472e9b8ad4af1a55b16b6feec}{data\-Base}
+\end{DoxyCompactItemize}
+\subsection*{on\-Create}
+\label{_amgrp482302d6ece95c8faf5dae4403ae20ba}%
+Method called when creating the view
+
+\begin{DoxyNote}{Note}
+This method initialises the view and set a click listener on the button. It also add the contact if everything is correct and the button 'save' is pushed. It also inform by toasts when the operation have not been complete or when it is successful. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See Also}
+android.\-app.\-Activity\-::on\-Create(android.\-os.\-Bundle) 
+
+android.\-widget.\-Button; 
+
+android.\-widget.\-Edit\-Text 
+
+android.\-widget.\-Toast 
+\end{DoxySeeAlso}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_add_contact_a2d81aed04d6662a27710c309e7bd8903}{on\-Create} (Bundle saved\-Instance\-State)
+\item 
+int \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_add_contact_a1b1be0deaca8a499bed880fb55519576}{check\-Constraints} (String name, String email)
+\begin{DoxyCompactList}\small\item\em Check the constraints to add a new contact. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class (extended from Activity) allow to add a contact to a database. 
+
+\begin{DoxyAuthor}{Author}
+Ruben Bermudez 
+
+Santiago Tapia 
+
+Isaac Morely
+\end{DoxyAuthor}
+\begin{DoxySeeAlso}{See Also}
+android.\-app.\-Activity 
+\end{DoxySeeAlso}
+
+
+Definition at line 44 of file Add\-Contact.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_add_contact_a1b1be0deaca8a499bed880fb55519576}{\index{npi\-::practicaandroid\-::tutorialnpi\-::\-Add\-Contact@{npi\-::practicaandroid\-::tutorialnpi\-::\-Add\-Contact}!check\-Constraints@{check\-Constraints}}
+\index{check\-Constraints@{check\-Constraints}!npi::practicaandroid::tutorialnpi::AddContact@{npi\-::practicaandroid\-::tutorialnpi\-::\-Add\-Contact}}
+\subsubsection[{check\-Constraints}]{\setlength{\rightskip}{0pt plus 5cm}int npi.\-practicaandroid.\-tutorialnpi.\-Add\-Contact.\-check\-Constraints (
+\begin{DoxyParamCaption}
+\item[{String}]{name, }
+\item[{String}]{email}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_add_contact_a1b1be0deaca8a499bed880fb55519576}
+
+
+Check the constraints to add a new contact. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the contact \\
+\hline
+{\em email} & Email of the contact \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if everything pass 1 if the contact already exists 2 if name is empty 3 if email is empty 
+\end{DoxyReturn}
+
+
+Definition at line 114 of file Add\-Contact.\-java.
+
+
+
+References npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-close(), npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-get\-All\-Names(), and npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-open().
+
+
+\begin{DoxyCode}
+                                                           \{
+        \textcolor{keywordflow}{try} \{
+            \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_add_contact_acec65dc472e9b8ad4af1a55b16b6feec}{dataBase}.\hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_a128413ac90cfc708b95c21d946f9600d}{open}();
+        \} \textcolor{keywordflow}{catch} (SQLException e) \{
+            e.printStackTrace();
+        \}
+        Cursor data = \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_add_contact_acec65dc472e9b8ad4af1a55b16b6feec}{dataBase}.\hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_ab57b493581975afbbf05b835c4fa4f21}{getAllNames}();
+        \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_add_contact_acec65dc472e9b8ad4af1a55b16b6feec}{dataBase}.\hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_a466dc4c61ae61457cf986b5d8c6f6f52}{close}();
+        \textcolor{keywordflow}{if} (data != null && data.getCount()>0)\{
+            \textcolor{keywordflow}{do} \{
+                \textcolor{keywordflow}{if} (data.getString(0).toLowerCase().equals(name.toLowerCase()))
+      \{
+                    data.close();
+                    \textcolor{keywordflow}{return} 1;
+                \}
+                \} \textcolor{keywordflow}{while} (data.moveToNext());                
+        \}
+        \textcolor{keywordflow}{if} (name.equals(\textcolor{stringliteral}{""}))
+            \textcolor{keywordflow}{return} 2;
+        \textcolor{keywordflow}{if} (email.equals(\textcolor{stringliteral}{""}))
+            \textcolor{keywordflow}{return} 3;
+        \textcolor{keywordflow}{return} 0;
+    \}
+\end{DoxyCode}
+\hypertarget{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_add_contact_a2d81aed04d6662a27710c309e7bd8903}{\index{npi\-::practicaandroid\-::tutorialnpi\-::\-Add\-Contact@{npi\-::practicaandroid\-::tutorialnpi\-::\-Add\-Contact}!on\-Create@{on\-Create}}
+\index{on\-Create@{on\-Create}!npi::practicaandroid::tutorialnpi::AddContact@{npi\-::practicaandroid\-::tutorialnpi\-::\-Add\-Contact}}
+\subsubsection[{on\-Create}]{\setlength{\rightskip}{0pt plus 5cm}void npi.\-practicaandroid.\-tutorialnpi.\-Add\-Contact.\-on\-Create (
+\begin{DoxyParamCaption}
+\item[{Bundle}]{saved\-Instance\-State}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_add_contact_a2d81aed04d6662a27710c309e7bd8903}
+
+
+Definition at line 59 of file Add\-Contact.\-java.
+
+
+
+References npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-add\-Contact(), npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-close(), and npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-open().
+
+
+\begin{DoxyCode}
+                                                       \{
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity\_add\_contact);
+        \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_add_contact_acec65dc472e9b8ad4af1a55b16b6feec}{dataBase} = \textcolor{keyword}{new} AdaptadorBD(getBaseContext());
+        \textcolor{keyword}{final} EditText name = (EditText) findViewById(R.id.AddName);
+        \textcolor{keyword}{final} EditText email = (EditText) findViewById(R.id.AddEmail);
+        \textcolor{keyword}{final} Button saveButton = (Button) findViewById(R.id.AddSaveButton);
+        saveButton.setOnClickListener(\textcolor{keyword}{new} View.OnClickListener() \{
+            \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View v) \{
+                String nameToSave = name.getText().toString();
+                String emailToSave = email.getText().toString();
+                \textcolor{keywordflow}{switch}(\hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_add_contact_a1b1be0deaca8a499bed880fb55519576}{checkConstraints}(nameToSave,emailToSave)
+      )\{
+                \textcolor{keywordflow}{case} 0:
+                    \textcolor{keywordflow}{try} \{
+                        \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_add_contact_acec65dc472e9b8ad4af1a55b16b6feec}{dataBase}.\hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_a128413ac90cfc708b95c21d946f9600d}{open}();
+                    \} \textcolor{keywordflow}{catch} (SQLException e) \{
+                        e.printStackTrace();
+                    \}
+                    \textcolor{keywordflow}{if}(\hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_add_contact_acec65dc472e9b8ad4af1a55b16b6feec}{dataBase}.\hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_ad439502dcc05da37509b1e693be223d9}{addContact}(nameToSave, 
+      emailToSave) != -1)\{
+                        \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_add_contact_acec65dc472e9b8ad4af1a55b16b6feec}{dataBase}.\hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_a466dc4c61ae61457cf986b5d8c6f6f52}{close}();
+                        Toast.makeText(AddContact.this,\textcolor{stringliteral}{"Contact has been added"}
+      ,Toast.LENGTH\_SHORT).show();
+                        AddContact.this.finish();
+                    \}
+                    \textcolor{keywordflow}{else} \{
+                        Toast.makeText(AddContact.this,\textcolor{stringliteral}{"Contact could not be
+       added"},Toast.LENGTH\_SHORT).show();
+                        AddContact.this.finish();
+                    \}
+                    \textcolor{keywordflow}{break};
+                \textcolor{keywordflow}{case} 1:
+                    Toast.makeText(AddContact.this,\textcolor{stringliteral}{"Contact already exists"},
+      Toast.LENGTH\_SHORT).show();
+                    \textcolor{keywordflow}{break};
+                \textcolor{keywordflow}{case} 2:
+                    Toast.makeText(AddContact.this,\textcolor{stringliteral}{"Contact name is empty"},
+      Toast.LENGTH\_SHORT).show();
+                    \textcolor{keywordflow}{break};
+                \textcolor{keywordflow}{case} 3:
+                    Toast.makeText(AddContact.this,\textcolor{stringliteral}{"Contact email is empty"},
+      Toast.LENGTH\_SHORT).show();
+                    \textcolor{keywordflow}{break};
+                \textcolor{keywordflow}{default}:
+                    \textcolor{keywordflow}{break};
+                \}
+            
+            \}
+        \});
+    \}
+\end{DoxyCode}
+\hypertarget{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_add_contact_a03fcd12f05d4ccf27abf686130df9668}{\index{npi\-::practicaandroid\-::tutorialnpi\-::\-Add\-Contact@{npi\-::practicaandroid\-::tutorialnpi\-::\-Add\-Contact}!on\-Pause@{on\-Pause}}
+\index{on\-Pause@{on\-Pause}!npi::practicaandroid::tutorialnpi::AddContact@{npi\-::practicaandroid\-::tutorialnpi\-::\-Add\-Contact}}
+\subsubsection[{on\-Pause}]{\setlength{\rightskip}{0pt plus 5cm}void npi.\-practicaandroid.\-tutorialnpi.\-Add\-Contact.\-on\-Pause (
+\begin{DoxyParamCaption}
+\item[{Bundle}]{saved\-Instance\-State}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_add_contact_a03fcd12f05d4ccf27abf686130df9668}
+
+
+Definition at line 145 of file Add\-Contact.\-java.
+
+
+
+References npi.\-practicaandroid.\-tutorialnpi.\-Adaptador\-B\-D.\-close().
+
+
+\begin{DoxyCode}
+                                                      \{
+        super.onPause();
+        \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_add_contact_acec65dc472e9b8ad4af1a55b16b6feec}{dataBase}.\hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_adaptador_b_d_a466dc4c61ae61457cf986b5d8c6f6f52}{close}();
+    \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_add_contact_acec65dc472e9b8ad4af1a55b16b6feec}{\index{npi\-::practicaandroid\-::tutorialnpi\-::\-Add\-Contact@{npi\-::practicaandroid\-::tutorialnpi\-::\-Add\-Contact}!data\-Base@{data\-Base}}
+\index{data\-Base@{data\-Base}!npi::practicaandroid::tutorialnpi::AddContact@{npi\-::practicaandroid\-::tutorialnpi\-::\-Add\-Contact}}
+\subsubsection[{data\-Base}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Adaptador\-B\-D} npi.\-practicaandroid.\-tutorialnpi.\-Add\-Contact.\-data\-Base\hspace{0.3cm}{\ttfamily [private]}}}\label{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_add_contact_acec65dc472e9b8ad4af1a55b16b6feec}
+
+
+Definition at line 45 of file Add\-Contact.\-java.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/npi/practicaandroid/tutorialnpi/\hyperlink{_add_contact_8java}{Add\-Contact.\-java}\end{DoxyCompactItemize}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Tutorial</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_multi_touch">Multitouch test</string>
+    <string name="title_activity_accelerometer">Acelerometer test</string>
+    <string name="title_activity_data_base">DataBase</string>
+    <string name="AddContact">Add</string>
+    <string name="RemoveContact">Remove</string>
+    <string name="ReadContact">Read</string>
+    <string name="title_activity_add_contact">Add Contact</string>
+    <string name="Email">Email</string>
+    <string name="Name">Name</string>
+    <string name="Save">Save</string>
+    <string name="title_activity_remove_contact">Remove Contact</string>
+    <string name="Remove">Remove</string>
+    <string name="title_activity_read_contact">Read Contact</string>
+    <string name="horizontal">Horizontally moved</string>
+    <string name="vertical">Vertically moved</string>
+    <string name="otro">What are you waiting for?\nDo you think i\'m making everything by myself?</string>
+    <string name="numero">0</string>
+    <string name="numerodedos">Number of fingers:</string>
+    <string name="nothing">No accelerometer found,\nplease by a newer device.</string>
+    <string name="title_activity_multitouch">Multitouch</string>
+
+</resources>

@@ -1,0 +1,385 @@
+\hypertarget{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer}{\section{npi.\-practicaandroid.\-tutorialnpi.\-Accelerometer Class Reference}
+\label{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer}\index{npi.\-practicaandroid.\-tutorialnpi.\-Accelerometer@{npi.\-practicaandroid.\-tutorialnpi.\-Accelerometer}}
+}
+
+
+This class (extended from Activity) implements a Sensor listener above the accelerometer in order to determine when the device is moved and also the direction (vertical or horizontal)  
+
+
+Inheritance diagram for npi.\-practicaandroid.\-tutorialnpi.\-Accelerometer\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{Indent}{\bf on\-Create}\par
+{\em Method called when creating the view
+
+\begin{DoxyNote}{Note}
+This method initialises the value of oldorientation with vertical orientation, set the view to a loyaut and get the accelerometer sensor. If this sensor doesn't exists, a expecial loyaout is loaded to the view.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See Also}
+android.\-app.\-Activity\-::on\-Create(android.\-os.\-Bundle) 
+\end{DoxySeeAlso}
+}\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a1bd1579a7cc755bf33a452662a7fe554}{on\-Create} (Bundle saved\-Instance\-State)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf on\-Sensor\-Changed}\par
+{\em This method is called each time the sensor values change (in this case, when the device is moved) The new values are read and the differences with the previous ones are computed (if this differences are smaller than the threshold, we assume it is noise and no movement have performed). Finally we get the current orientation of the device and depending on it, we load the correct layout to the view.
+
+\begin{DoxyNote}{Note}
+The first time this method is called, only the values are read, because we don't have previous data to find the kind of movement performed.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See Also}
+android.\-hardware.\-Sensor\-Event\-Listener\-::on\-Sensor\-Changed(android.\-hardware.\-Sensor\-Event) 
+
+android.\-view.\-Display 
+
+android.\-view.\-Surface 
+\end{DoxySeeAlso}
+}\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a5636ff2ca0fa8c815803700980f90fc7}{on\-Sensor\-Changed} (Sensor\-Event event)
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Protected Member Functions}
+\begin{Indent}{\bf on\-Resume}\par
+{\em This method is called always before show the view, so it is the right place to start listening the sensor.
+
+\begin{DoxyNote}{Note}
+Starting here, we can save battery just using on\-Pause to stop the listening.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See Also}
+android.\-app.\-Activity\-::on\-Rsume() 
+\end{DoxySeeAlso}
+}\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_af1ecce3c0b53a9d08beaa4aaf5f6c9f8}{on\-Resume} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_adeab08257cb4a687507a01ed9f4a38b6}{oldx}
+\item 
+boolean \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a525132490dab752030175fe7bf6fd4c4}{modified} = false
+\item 
+Sensor\-Manager \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a3f322f5b38bcf2cdd0632a5761e8b561}{m\-Sensor\-Manager}
+\item 
+Sensor \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_ae5d3a5141d3abe2026f24f948b6a220a}{m\-Accelerometer}
+\item 
+boolean \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a940cba9dcf2a5bd11cbaad56161d85dc}{initialization} = true
+\item 
+final float \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a1bfd98ab9d7bf8fc65bbd8454f7c7625}{N\-O\-I\-S\-E} = (float) 1.\-0
+\item 
+int \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_aa60b6921ce35928d28da993573e001d3}{oldorientation}
+\end{DoxyCompactItemize}
+\subsection*{on\-Pause}
+\label{_amgrpc29547226e19994144a930f16b44fad1}%
+This method is called just when the view is not visible for the user (it doesn't mean that the activity is going to be destroyed.
+
+\begin{DoxyNote}{Note}
+The sensor listener is stopped to save battery
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See Also}
+android.\-app.\-Activity\-::on\-Pause() 
+\end{DoxySeeAlso}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a848f58dd4fadf10976677336d40acd75}{on\-Accuracy\-Changed} (Sensor arg0, int arg1)
+\item 
+void \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a0b620b3513837c76e6e2f5e11011464b}{on\-Pause} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class (extended from Activity) implements a Sensor listener above the accelerometer in order to determine when the device is moved and also the direction (vertical or horizontal) 
+
+\begin{DoxyAuthor}{Author}
+Ruben Bermudez 
+
+Santiago Tapia 
+
+Isaac Morely
+\end{DoxyAuthor}
+\begin{DoxySeeAlso}{See Also}
+android.\-app.\-Activity 
+
+android.\-hardware.\-Sensor\-Event\-Listener 
+\end{DoxySeeAlso}
+
+
+Definition at line 44 of file Accelerometer.\-java.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a848f58dd4fadf10976677336d40acd75}{\index{npi\-::practicaandroid\-::tutorialnpi\-::\-Accelerometer@{npi\-::practicaandroid\-::tutorialnpi\-::\-Accelerometer}!on\-Accuracy\-Changed@{on\-Accuracy\-Changed}}
+\index{on\-Accuracy\-Changed@{on\-Accuracy\-Changed}!npi::practicaandroid::tutorialnpi::Accelerometer@{npi\-::practicaandroid\-::tutorialnpi\-::\-Accelerometer}}
+\subsubsection[{on\-Accuracy\-Changed}]{\setlength{\rightskip}{0pt plus 5cm}void npi.\-practicaandroid.\-tutorialnpi.\-Accelerometer.\-on\-Accuracy\-Changed (
+\begin{DoxyParamCaption}
+\item[{Sensor}]{arg0, }
+\item[{int}]{arg1}
+\end{DoxyParamCaption}
+)}}\label{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a848f58dd4fadf10976677336d40acd75}
+
+
+Definition at line 104 of file Accelerometer.\-java.
+
+
+\begin{DoxyCode}
+                                                         \{
+        \textcolor{comment}{// TODO Auto-generated method stub}
+
+    \}
+\end{DoxyCode}
+\hypertarget{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a1bd1579a7cc755bf33a452662a7fe554}{\index{npi\-::practicaandroid\-::tutorialnpi\-::\-Accelerometer@{npi\-::practicaandroid\-::tutorialnpi\-::\-Accelerometer}!on\-Create@{on\-Create}}
+\index{on\-Create@{on\-Create}!npi::practicaandroid::tutorialnpi::Accelerometer@{npi\-::practicaandroid\-::tutorialnpi\-::\-Accelerometer}}
+\subsubsection[{on\-Create}]{\setlength{\rightskip}{0pt plus 5cm}void npi.\-practicaandroid.\-tutorialnpi.\-Accelerometer.\-on\-Create (
+\begin{DoxyParamCaption}
+\item[{Bundle}]{saved\-Instance\-State}
+\end{DoxyParamCaption}
+)}}\label{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a1bd1579a7cc755bf33a452662a7fe554}
+
+
+Definition at line 64 of file Accelerometer.\-java.
+
+
+
+References npi.\-practicaandroid.\-tutorialnpi.\-Accelerometer.\-m\-Accelerometer, npi.\-practicaandroid.\-tutorialnpi.\-Accelerometer.\-m\-Sensor\-Manager, and npi.\-practicaandroid.\-tutorialnpi.\-Accelerometer.\-oldorientation.
+
+
+\begin{DoxyCode}
+                                                   \{
+        super.onCreate(savedInstanceState);
+        \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_aa60b6921ce35928d28da993573e001d3}{oldorientation} = Surface.ROTATION\_0;
+        setContentView(R.layout.activity\_accelerometer\_otro);
+        \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a3f322f5b38bcf2cdd0632a5761e8b561}{mSensorManager} = (SensorManager) getSystemService(Context
+      .SENSOR\_SERVICE);
+        \textcolor{keywordflow}{if} (\hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a3f322f5b38bcf2cdd0632a5761e8b561}{mSensorManager}.getSensorList(Sensor.
+      TYPE\_ACCELEROMETER).size() == 0)
+            setContentView(R.layout.activity\_accelerometer\_nothing);
+        \textcolor{keywordflow}{else} \{
+            \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_ae5d3a5141d3abe2026f24f948b6a220a}{mAccelerometer} = \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a3f322f5b38bcf2cdd0632a5761e8b561}{mSensorManager}.
+      getDefaultSensor(Sensor.TYPE\_ACCELEROMETER);
+        \}
+        
+    \}
+\end{DoxyCode}
+\hypertarget{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a0b620b3513837c76e6e2f5e11011464b}{\index{npi\-::practicaandroid\-::tutorialnpi\-::\-Accelerometer@{npi\-::practicaandroid\-::tutorialnpi\-::\-Accelerometer}!on\-Pause@{on\-Pause}}
+\index{on\-Pause@{on\-Pause}!npi::practicaandroid::tutorialnpi::Accelerometer@{npi\-::practicaandroid\-::tutorialnpi\-::\-Accelerometer}}
+\subsubsection[{on\-Pause}]{\setlength{\rightskip}{0pt plus 5cm}void npi.\-practicaandroid.\-tutorialnpi.\-Accelerometer.\-on\-Pause (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a0b620b3513837c76e6e2f5e11011464b}
+
+
+Definition at line 98 of file Accelerometer.\-java.
+
+
+
+References npi.\-practicaandroid.\-tutorialnpi.\-Accelerometer.\-m\-Sensor\-Manager.
+
+
+\begin{DoxyCode}
+                             \{
+        super.onPause();
+        \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a3f322f5b38bcf2cdd0632a5761e8b561}{mSensorManager}.unregisterListener(\textcolor{keyword}{this});
+    \}
+\end{DoxyCode}
+\hypertarget{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_af1ecce3c0b53a9d08beaa4aaf5f6c9f8}{\index{npi\-::practicaandroid\-::tutorialnpi\-::\-Accelerometer@{npi\-::practicaandroid\-::tutorialnpi\-::\-Accelerometer}!on\-Resume@{on\-Resume}}
+\index{on\-Resume@{on\-Resume}!npi::practicaandroid::tutorialnpi::Accelerometer@{npi\-::practicaandroid\-::tutorialnpi\-::\-Accelerometer}}
+\subsubsection[{on\-Resume}]{\setlength{\rightskip}{0pt plus 5cm}void npi.\-practicaandroid.\-tutorialnpi.\-Accelerometer.\-on\-Resume (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_af1ecce3c0b53a9d08beaa4aaf5f6c9f8}
+
+
+Definition at line 85 of file Accelerometer.\-java.
+
+
+
+References npi.\-practicaandroid.\-tutorialnpi.\-Accelerometer.\-m\-Accelerometer, and npi.\-practicaandroid.\-tutorialnpi.\-Accelerometer.\-m\-Sensor\-Manager.
+
+
+\begin{DoxyCode}
+                              \{
+        super.onResume();
+        \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a3f322f5b38bcf2cdd0632a5761e8b561}{mSensorManager}.registerListener(\textcolor{keyword}{this}, \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_ae5d3a5141d3abe2026f24f948b6a220a}{mAccelerometer}
+      , SensorManager.SENSOR\_DELAY\_NORMAL);
+    \}
+\end{DoxyCode}
+\hypertarget{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a5636ff2ca0fa8c815803700980f90fc7}{\index{npi\-::practicaandroid\-::tutorialnpi\-::\-Accelerometer@{npi\-::practicaandroid\-::tutorialnpi\-::\-Accelerometer}!on\-Sensor\-Changed@{on\-Sensor\-Changed}}
+\index{on\-Sensor\-Changed@{on\-Sensor\-Changed}!npi::practicaandroid::tutorialnpi::Accelerometer@{npi\-::practicaandroid\-::tutorialnpi\-::\-Accelerometer}}
+\subsubsection[{on\-Sensor\-Changed}]{\setlength{\rightskip}{0pt plus 5cm}void npi.\-practicaandroid.\-tutorialnpi.\-Accelerometer.\-on\-Sensor\-Changed (
+\begin{DoxyParamCaption}
+\item[{Sensor\-Event}]{event}
+\end{DoxyParamCaption}
+)}}\label{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a5636ff2ca0fa8c815803700980f90fc7}
+
+
+Definition at line 125 of file Accelerometer.\-java.
+
+
+
+References npi.\-practicaandroid.\-tutorialnpi.\-Accelerometer.\-initialization, npi.\-practicaandroid.\-tutorialnpi.\-Accelerometer.\-modified, npi.\-practicaandroid.\-tutorialnpi.\-Accelerometer.\-N\-O\-I\-S\-E, npi.\-practicaandroid.\-tutorialnpi.\-Accelerometer.\-oldorientation, and npi.\-practicaandroid.\-tutorialnpi.\-Accelerometer.\-oldx.
+
+
+\begin{DoxyCode}
+                                                   \{
+        \textcolor{keywordflow}{if} (\hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a525132490dab752030175fe7bf6fd4c4}{modified}) \{
+            \textcolor{keywordtype}{float} x = \textcolor{keyword}{event}.values[0];
+            \textcolor{keywordtype}{float} y = \textcolor{keyword}{event}.values[1];
+            \textcolor{keywordtype}{float} z = \textcolor{keyword}{event}.values[2];
+            
+            \textcolor{keywordtype}{float} deltaX = Math.abs(\hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_adeab08257cb4a687507a01ed9f4a38b6}{oldx} - x);
+            \textcolor{keywordtype}{float} deltaY = Math.abs(oldy - y);
+            \textcolor{keywordtype}{float} deltaZ = Math.abs(oldz - z);
+            
+            \textcolor{keywordflow}{if} (deltaX < \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a1bfd98ab9d7bf8fc65bbd8454f7c7625}{NOISE}) deltaX = (float)0.0;
+            \textcolor{keywordflow}{if} (deltaY < \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a1bfd98ab9d7bf8fc65bbd8454f7c7625}{NOISE}) deltaY = (float)0.0;
+            \textcolor{keywordflow}{if} (deltaZ < \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a1bfd98ab9d7bf8fc65bbd8454f7c7625}{NOISE}) deltaZ = (float)0.0;
+            
+            \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_adeab08257cb4a687507a01ed9f4a38b6}{oldx} = \textcolor{keyword}{event}.values[0];
+            oldy = \textcolor{keyword}{event}.values[1];
+            oldz = \textcolor{keyword}{event}.values[2];
+            
+            Display getOrient = getWindowManager().getDefaultDisplay();
+            \textcolor{keywordtype}{int} orientation = getOrient.getRotation();
+            \textcolor{keywordflow}{if} (orientation == Surface.ROTATION\_0 || orientation == Surface.
+      ROTATION\_180 )\{
+                \textcolor{keywordflow}{if} (\hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_aa60b6921ce35928d28da993573e001d3}{oldorientation} == Surface.ROTATION\_90 || 
+      \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_aa60b6921ce35928d28da993573e001d3}{oldorientation} == Surface.ROTATION\_270)\{
+                    \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a940cba9dcf2a5bd11cbaad56161d85dc}{initialization} = \textcolor{keyword}{true};
+                \}
+                \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_aa60b6921ce35928d28da993573e001d3}{oldorientation} = orientation;
+                \textcolor{keywordflow}{if} (deltaX > deltaY) \{
+                    setContentView(R.layout.activity\_accelerometer\_horizontal);
+                \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (deltaY > deltaX) \{
+                    setContentView(R.layout.activity\_accelerometer\_vertical);
+                \}
+                \textcolor{keywordflow}{else} \{
+                    \textcolor{keywordflow}{if} (\hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a940cba9dcf2a5bd11cbaad56161d85dc}{initialization})\{
+                        setContentView(R.layout.activity\_accelerometer\_otro);
+                        \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a940cba9dcf2a5bd11cbaad56161d85dc}{initialization} = \textcolor{keyword}{false};
+                    \}
+                \}
+            \}
+            \textcolor{keywordflow}{else}\{
+                \textcolor{keywordflow}{if} (\hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_aa60b6921ce35928d28da993573e001d3}{oldorientation} == Surface.ROTATION\_0 || 
+      \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_aa60b6921ce35928d28da993573e001d3}{oldorientation} == Surface.ROTATION\_180)\{
+                    \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a940cba9dcf2a5bd11cbaad56161d85dc}{initialization} = \textcolor{keyword}{true};
+                \}
+                \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_aa60b6921ce35928d28da993573e001d3}{oldorientation} = orientation;
+                \textcolor{keywordflow}{if} (deltaX > deltaY) \{
+                    setContentView(R.layout.activity\_accelerometer\_vertical);
+                \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (deltaY > deltaX) \{
+                    setContentView(R.layout.activity\_accelerometer\_horizontal);
+                \}
+                \textcolor{keywordflow}{else} \{
+                    \textcolor{keywordflow}{if} (\hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a940cba9dcf2a5bd11cbaad56161d85dc}{initialization})\{
+                        setContentView(R.layout.activity\_accelerometer\_otro);
+                        \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a940cba9dcf2a5bd11cbaad56161d85dc}{initialization} = \textcolor{keyword}{false};
+                    \}
+                \}
+            \}
+        \}
+        \textcolor{keywordflow}{else} \{
+            \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_adeab08257cb4a687507a01ed9f4a38b6}{oldx} = \textcolor{keyword}{event}.values[0];
+            oldy = \textcolor{keyword}{event}.values[1];
+            oldz = \textcolor{keyword}{event}.values[2];
+            
+            \hyperlink{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a525132490dab752030175fe7bf6fd4c4}{modified} = \textcolor{keyword}{true};
+        \}
+    \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a940cba9dcf2a5bd11cbaad56161d85dc}{\index{npi\-::practicaandroid\-::tutorialnpi\-::\-Accelerometer@{npi\-::practicaandroid\-::tutorialnpi\-::\-Accelerometer}!initialization@{initialization}}
+\index{initialization@{initialization}!npi::practicaandroid::tutorialnpi::Accelerometer@{npi\-::practicaandroid\-::tutorialnpi\-::\-Accelerometer}}
+\subsubsection[{initialization}]{\setlength{\rightskip}{0pt plus 5cm}boolean npi.\-practicaandroid.\-tutorialnpi.\-Accelerometer.\-initialization = true\hspace{0.3cm}{\ttfamily [private]}}}\label{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a940cba9dcf2a5bd11cbaad56161d85dc}
+
+
+Definition at line 50 of file Accelerometer.\-java.
+
+
+
+Referenced by npi.\-practicaandroid.\-tutorialnpi.\-Accelerometer.\-on\-Sensor\-Changed().
+
+\hypertarget{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_ae5d3a5141d3abe2026f24f948b6a220a}{\index{npi\-::practicaandroid\-::tutorialnpi\-::\-Accelerometer@{npi\-::practicaandroid\-::tutorialnpi\-::\-Accelerometer}!m\-Accelerometer@{m\-Accelerometer}}
+\index{m\-Accelerometer@{m\-Accelerometer}!npi::practicaandroid::tutorialnpi::Accelerometer@{npi\-::practicaandroid\-::tutorialnpi\-::\-Accelerometer}}
+\subsubsection[{m\-Accelerometer}]{\setlength{\rightskip}{0pt plus 5cm}Sensor npi.\-practicaandroid.\-tutorialnpi.\-Accelerometer.\-m\-Accelerometer\hspace{0.3cm}{\ttfamily [private]}}}\label{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_ae5d3a5141d3abe2026f24f948b6a220a}
+
+
+Definition at line 49 of file Accelerometer.\-java.
+
+
+
+Referenced by npi.\-practicaandroid.\-tutorialnpi.\-Accelerometer.\-on\-Create(), and npi.\-practicaandroid.\-tutorialnpi.\-Accelerometer.\-on\-Resume().
+
+\hypertarget{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a525132490dab752030175fe7bf6fd4c4}{\index{npi\-::practicaandroid\-::tutorialnpi\-::\-Accelerometer@{npi\-::practicaandroid\-::tutorialnpi\-::\-Accelerometer}!modified@{modified}}
+\index{modified@{modified}!npi::practicaandroid::tutorialnpi::Accelerometer@{npi\-::practicaandroid\-::tutorialnpi\-::\-Accelerometer}}
+\subsubsection[{modified}]{\setlength{\rightskip}{0pt plus 5cm}boolean npi.\-practicaandroid.\-tutorialnpi.\-Accelerometer.\-modified = false\hspace{0.3cm}{\ttfamily [private]}}}\label{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a525132490dab752030175fe7bf6fd4c4}
+
+
+Definition at line 47 of file Accelerometer.\-java.
+
+
+
+Referenced by npi.\-practicaandroid.\-tutorialnpi.\-Accelerometer.\-on\-Sensor\-Changed().
+
+\hypertarget{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a3f322f5b38bcf2cdd0632a5761e8b561}{\index{npi\-::practicaandroid\-::tutorialnpi\-::\-Accelerometer@{npi\-::practicaandroid\-::tutorialnpi\-::\-Accelerometer}!m\-Sensor\-Manager@{m\-Sensor\-Manager}}
+\index{m\-Sensor\-Manager@{m\-Sensor\-Manager}!npi::practicaandroid::tutorialnpi::Accelerometer@{npi\-::practicaandroid\-::tutorialnpi\-::\-Accelerometer}}
+\subsubsection[{m\-Sensor\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}Sensor\-Manager npi.\-practicaandroid.\-tutorialnpi.\-Accelerometer.\-m\-Sensor\-Manager\hspace{0.3cm}{\ttfamily [private]}}}\label{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a3f322f5b38bcf2cdd0632a5761e8b561}
+
+
+Definition at line 48 of file Accelerometer.\-java.
+
+
+
+Referenced by npi.\-practicaandroid.\-tutorialnpi.\-Accelerometer.\-on\-Create(), npi.\-practicaandroid.\-tutorialnpi.\-Accelerometer.\-on\-Pause(), and npi.\-practicaandroid.\-tutorialnpi.\-Accelerometer.\-on\-Resume().
+
+\hypertarget{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a1bfd98ab9d7bf8fc65bbd8454f7c7625}{\index{npi\-::practicaandroid\-::tutorialnpi\-::\-Accelerometer@{npi\-::practicaandroid\-::tutorialnpi\-::\-Accelerometer}!N\-O\-I\-S\-E@{N\-O\-I\-S\-E}}
+\index{N\-O\-I\-S\-E@{N\-O\-I\-S\-E}!npi::practicaandroid::tutorialnpi::Accelerometer@{npi\-::practicaandroid\-::tutorialnpi\-::\-Accelerometer}}
+\subsubsection[{N\-O\-I\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}final float npi.\-practicaandroid.\-tutorialnpi.\-Accelerometer.\-N\-O\-I\-S\-E = (float) 1.\-0\hspace{0.3cm}{\ttfamily [private]}}}\label{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_a1bfd98ab9d7bf8fc65bbd8454f7c7625}
+
+
+Definition at line 51 of file Accelerometer.\-java.
+
+
+
+Referenced by npi.\-practicaandroid.\-tutorialnpi.\-Accelerometer.\-on\-Sensor\-Changed().
+
+\hypertarget{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_aa60b6921ce35928d28da993573e001d3}{\index{npi\-::practicaandroid\-::tutorialnpi\-::\-Accelerometer@{npi\-::practicaandroid\-::tutorialnpi\-::\-Accelerometer}!oldorientation@{oldorientation}}
+\index{oldorientation@{oldorientation}!npi::practicaandroid::tutorialnpi::Accelerometer@{npi\-::practicaandroid\-::tutorialnpi\-::\-Accelerometer}}
+\subsubsection[{oldorientation}]{\setlength{\rightskip}{0pt plus 5cm}int npi.\-practicaandroid.\-tutorialnpi.\-Accelerometer.\-oldorientation\hspace{0.3cm}{\ttfamily [private]}}}\label{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_aa60b6921ce35928d28da993573e001d3}
+
+
+Definition at line 52 of file Accelerometer.\-java.
+
+
+
+Referenced by npi.\-practicaandroid.\-tutorialnpi.\-Accelerometer.\-on\-Create(), and npi.\-practicaandroid.\-tutorialnpi.\-Accelerometer.\-on\-Sensor\-Changed().
+
+\hypertarget{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_adeab08257cb4a687507a01ed9f4a38b6}{\index{npi\-::practicaandroid\-::tutorialnpi\-::\-Accelerometer@{npi\-::practicaandroid\-::tutorialnpi\-::\-Accelerometer}!oldx@{oldx}}
+\index{oldx@{oldx}!npi::practicaandroid::tutorialnpi::Accelerometer@{npi\-::practicaandroid\-::tutorialnpi\-::\-Accelerometer}}
+\subsubsection[{oldx}]{\setlength{\rightskip}{0pt plus 5cm}float npi.\-practicaandroid.\-tutorialnpi.\-Accelerometer.\-oldx\hspace{0.3cm}{\ttfamily [private]}}}\label{classnpi_1_1practicaandroid_1_1tutorialnpi_1_1_accelerometer_adeab08257cb4a687507a01ed9f4a38b6}
+
+
+Definition at line 46 of file Accelerometer.\-java.
+
+
+
+Referenced by npi.\-practicaandroid.\-tutorialnpi.\-Accelerometer.\-on\-Sensor\-Changed().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/npi/practicaandroid/tutorialnpi/\hyperlink{_accelerometer_8java}{Accelerometer.\-java}\end{DoxyCompactItemize}
