@@ -1,5 +1,5 @@
 /**
- *   @license Copyright 2013 Ruben Bermudez, Santiago Tapia e Isaac Moreli
+ *   Copyright 2013 Ruben Bermudez, Santiago Tapia and Isaac Moreli
  * 
  *   This file is part of TutorialNPI.
  *
